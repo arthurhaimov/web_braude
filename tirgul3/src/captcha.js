@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
           return;
         }
 
-        const isAdmin = window.find("__first_user_check__") === undefined;
+        const isAdmin = window.getUserCount() === 0;
         window.add(username, email, password, dob, isAdmin);
         registerMessage.textContent = "Registration successful!";
         registerMessage.classList.remove("text-red-500");
